@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
     "react": "^16.3.0",
@@ -23,9 +24,7 @@
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13"
   },
-  "dependencies": {
-    "babel-core": "^6.26.0"
-  },
+  "dependencies": {},
   "babel": {
     "presets": [
       "es2015",
