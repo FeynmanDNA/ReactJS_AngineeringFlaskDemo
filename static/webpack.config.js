@@ -16,13 +16,6 @@ const config = {
           fallback: 'style-loader',
           use: 'css-loader'
         })
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: {
-          loader: 'file-loader',
-          options: { name: 'img/[name].[ext]' }
-        }
       }
     ]
   },
