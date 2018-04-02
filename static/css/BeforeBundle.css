@@ -1,0 +1,24 @@
+.header-img {
+  height: 100px;
+  text-align: center;
+  background-image: url('../images/header.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 300;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 30px;
+  font-weight: 300;
+}
+
+button:hover {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}

@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   entry: __dirname + '/js/index.jsx',
@@ -8,6 +9,20 @@ const config = {
         test: /\.js?/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: { name: 'img/[name].[ext]' }
+        }
       }
     ]
   },
@@ -17,7 +32,10 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css'),
+  ]
 };
 
 module.exports = config;
